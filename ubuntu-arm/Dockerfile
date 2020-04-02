@@ -8,7 +8,7 @@ FROM docker.io/i686/ubuntu:14.04
 LABEL maintainer="taoshanghu <taoshanghu@163.com>"
 ADD localfile/Trolltech.tar.gz /usr/local
 ADD localfile/x11-dev.tar.gz /usr/local
-COPY localfile/installjammer /usr/local
+COPY localfile/installjammer /usr/local//installjammer
 
 RUN sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list && \
         apt update && \
