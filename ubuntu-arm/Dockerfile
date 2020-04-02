@@ -20,7 +20,8 @@ RUN sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list && 
         ln -s /usr/local/x11-dev/lib/libX11.so.6 /usr/lib/i386-linux-gnu/libX11.so.6 && \
     mkdir /src && \
     chmod 777 /src && \
-    rm -rf /var/cache/*
+    rm -rf /var/cache/* && \
+    chmod 755 /usr/local/installjammer/installjammer
 
 ENV PATH=/usr/local/Trolltech/Qt-4.8.6/bin:$PATH
 ENV SYSTEMBITS=x86
