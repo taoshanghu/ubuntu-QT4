@@ -36,7 +36,8 @@ PLATFORM=""
 
 platform() {
     OS=`uname`
-    MACHINE=`uname -m`
+    #MACHINE=`uname -m`
+    MACHINE=$SYSTEMBITS
 
     case $MACHINE in
         *86)
