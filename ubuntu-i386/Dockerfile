@@ -6,7 +6,7 @@
 
 FROM docker.io/i686/ubuntu:14.04
 LABEL maintainer="taoshanghu <taoshanghu@163.com>"
-ADD localfile/installjammer
+COPY localfile/installjammer
 
 RUN sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list && \
     apt update && \
